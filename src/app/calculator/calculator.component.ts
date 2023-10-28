@@ -8,12 +8,12 @@ import { Component } from '@angular/core';
 export class CalculatorComponent {
   displayValue: string = '';
   calculated: boolean = false;
-  firstValue: string = ''; // Variável para o primeiro valor da operação
-  operator: string = ''; // Variável para armazenar o operador
+  firstValue: string = ''; 
+  operator: string = ''; 
 
   appendToDisplay(value: string) {
     if (this.calculated) {
-      this.displayValue = ''; // Limpa o display quando um cálculo foi concluído
+      this.displayValue = ''; 
       this.calculated = false;
     }
     this.displayValue += value;
@@ -24,7 +24,7 @@ export class CalculatorComponent {
       if (this.firstValue === '') {
         this.firstValue = this.displayValue;
       } else {
-        this.calculate(); // Realize um cálculo se houver um primeiro valor e um operador
+        this.calculate();
       }
       this.operator = op;
       this.displayValue = '';
